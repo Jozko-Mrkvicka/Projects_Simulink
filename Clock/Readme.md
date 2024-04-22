@@ -17,8 +17,8 @@ Once time is set, alarm can be switched to standby mode by flipping the *Arm/Dis
 
 
 # Model Overview
-For more details please see [Clock.pdf](./Clock.pdf).
-![Clock (top view)](./Clock_TopView.png "Digital Clock with Alarm (top view)")
+For more details please see [Clock.pdf](./Docs/Clock.pdf).
+![Clock (top view)](./Docs/Clock_TopView.png "Digital Clock with Alarm (top view)")
 
 
 
