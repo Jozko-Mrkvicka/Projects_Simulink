@@ -1,0 +1,97 @@
+# Basic clock frequency
+    - f = 32768Hz
+    - Implement dedicated 15-bit game speed counter (2 ^ 15 = 32768).
+
+
+# Basic game speed
+    - T = 1s
+    - Speed at the beginning of a new game.
+
+
+# Input buttons reaction speed
+    - T = 0.1s
+    - Defines how fast can active object move (to side or to bottom) when button is pressed.
+
+
+# Speed increase
+    - After every 10 points, increase game speed.
+
+
+# Object shapes
+    I: #   O: ##  Z: ##   T: ###
+       #      ##      ##      #
+       #
+       #
+
+
+# Memory for storing playground
+    - 16 x 24 bit
+
+
+# Registers for storing active object
+    - X and Y registers.
+    - 4 positions per register (number of pixels per object is 4).
+    - 5 bits per position (2 ^ 5 > playground dimensions).
+
+
+# Counter/Looper
+    - 2-bit counter (0 -> 3).
+    - Counter will be used to loop through each pixel of the active object to perform further action (draw, erase, wall detection, ...).
+
+
+# Object generation
+    - Objects will be generated randomly from predefined shapes.
+    - Use (pseudo) random number generator.
+
+
+# Object drawing/erasing (storing to/ erasing from playground memory)
+    - Active object will be copied from register to playground memory.
+    - Drawn object (already copied to playground memory) will be deleted from that memory.
+
+
+# Object shift (vertical/horizontal)
+    - Active object can be shifted by player`s input downwards and to sides.
+
+
+# Object rotation
+    - Active object can be rotated to one side.
+
+
+# Display output
+    - Playground memory will be directly mapped to display.
+
+
+# Wall detection
+    - Before every redraw, check if active object reached a playground wall.
+    - Loop through all pixels of the active object.
+    - Check if one position left or right of active object (X + 1 or X - 1) is already placed pixel.
+
+
+# Bottom detection
+    - Before every redraw, check if object reached the bottom of the playground.
+    - Loop through all pixels of the active object.
+    - Check if one position bellow active object (Y + 1) is already placed pixel.
+
+
+# Complete bottom line check
+    - Check if all pixels on the very bottom line of the playground are set.
+    - Perform this check after active object is stored to the playground memory.
+
+
+# Playground shifting
+    - In case of the bottom line fully set, shift entire playground by one pixel downwards.
+    - Connect all pixels in each vertical line as a shift register.
+
+
+# Score counter
+    - After every playground shift, add one point.
+
+
+# Game over detection
+    - If active object immediately after its creation touches the playground bottom then game over.
+
+
+# Game restart
+    - Erase screen using the "wave up and down" effect.
+    - Reset the score counter.
+
