@@ -1,3 +1,33 @@
+# Object shapes
+   O:  ##
+       ##
+          
+   I:  #     ####
+       #
+       #
+       #
+
+   Z1: ##      #
+        ##    ##
+              #
+
+   Z2:  ##    #
+       ##     ##
+               #
+
+   T:  ###      #     #     #  
+        #      ##    ###    ##
+                #           #  
+
+   L1: #       ###    ##      #
+       #       #       #    ###
+       ##              #          
+
+   L2:  #     #      ##     ###
+        #     ###    #        #
+       ##            #
+
+
 # Basic clock frequency
     - f = 32768Hz
     - Implement dedicated 15-bit game speed counter (2 ^ 15 = 32768).
@@ -17,15 +47,8 @@
     - After every 10 points, increase game speed.
 
 
-# Object shapes
-    I: #   O: ##  Z: ##   T: ###
-       #      ##      ##      #
-       #
-       #
-
-
 # Memory for storing playground
-    - 16 x 24 bit
+    - 16 x 32 bit
 
 
 # Registers for storing active object
