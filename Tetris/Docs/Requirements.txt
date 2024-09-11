@@ -28,6 +28,10 @@
        ##            #
 
 
+# Memory for storing playground
+    - 16 x 32 bit
+
+
 # Basic clock frequency
     - f = 32768Hz
     - Implement dedicated 15-bit game speed counter (2 ^ 15 = 32768).
@@ -47,10 +51,6 @@
     - After every 10 points, increase game speed.
 
 
-# Memory for storing playground
-    - 16 x 32 bit
-
-
 # Registers for storing active object
     - X and Y registers.
     - 4 positions per register (number of pixels per object is 4).
@@ -68,16 +68,16 @@
 
 
 # Object drawing/erasing (storing to/ erasing from playground memory)
-    - Active object will be copied from register to playground memory.
     - Drawn object (already copied to playground memory) will be deleted from that memory.
+    - Active object will be copied from register to playground memory.
 
 
 # Object shift (vertical/horizontal)
-    - Active object can be shifted by player`s input downwards and to sides.
+    - Active object can be shifted by player`s input downwards and to the sides.
 
 
 # Object rotation
-    - Active object can be rotated to one side.
+    - Active object can be rotated in one direction.
 
 
 # Display output
@@ -87,7 +87,7 @@
 # Wall detection
     - Before every redraw, check if active object reached a playground wall.
     - Loop through all pixels of the active object.
-    - Check if one position left or right of active object (X + 1 or X - 1) is already placed pixel.
+    - Check if one position to left or to right from active object (X + 1 or X - 1) is already placed pixel.
 
 
 # Bottom detection
@@ -98,7 +98,7 @@
 
 # Complete bottom line check
     - Check if all pixels on the very bottom line of the playground are set.
-    - Perform this check after active object is stored to the playground memory.
+    - Perform this check every time when active object is redrawn.
 
 
 # Playground shifting
