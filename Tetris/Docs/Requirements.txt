@@ -28,8 +28,32 @@
        ##            #
 
 
+(Done)
 # Memory for storing playground
     - 16 x 32 bit
+
+
+(Done)
+# Display output
+    - Playground memory will be directly mapped to display.
+
+
+# Sequencer
+    - Erase active object.
+    - Move/rotate active object.
+    - Redraw active object.
+    - Detect collisions.
+
+
+# Registers for storing active object
+    - X and Y registers.
+    - 4 positions per register (number of pixels per object is 4).
+    - 5 bits per position (2 ^ 5 > playground dimensions).
+
+
+# Counter/Looper
+    - 2-bit counter (0 -> 3).
+    - Counter will be used to loop through each pixel of the active object to perform further action (draw, erase, wall detection, ...).
 
 
 # Basic clock frequency
@@ -42,24 +66,13 @@
     - Speed at the beginning of a new game.
 
 
-# Input buttons reaction speed
-    - T = 0.1s
-    - Defines how fast can active object move (to side or to bottom) when button is pressed.
-
-
 # Speed increase
     - After every 10 points, increase game speed.
 
 
-# Registers for storing active object
-    - X and Y registers.
-    - 4 positions per register (number of pixels per object is 4).
-    - 5 bits per position (2 ^ 5 > playground dimensions).
-
-
-# Counter/Looper
-    - 2-bit counter (0 -> 3).
-    - Counter will be used to loop through each pixel of the active object to perform further action (draw, erase, wall detection, ...).
+# Input buttons reaction speed
+    - T = 0.1s
+    - Defines how fast can active object move (to side or to bottom) when button is pressed.
 
 
 # Object generation
@@ -78,10 +91,6 @@
 
 # Object rotation
     - Active object can be rotated in one direction.
-
-
-# Display output
-    - Playground memory will be directly mapped to display.
 
 
 # Wall detection
