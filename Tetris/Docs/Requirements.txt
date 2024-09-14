@@ -1,3 +1,4 @@
+(Done)
 # Object shapes
    O:  ##
        ##
@@ -38,22 +39,31 @@
     - Playground memory will be directly mapped to display.
 
 
-# Sequencer
-    - Erase active object.
-    - Move/rotate active object.
-    - Redraw active object.
-    - Detect collisions.
-
-
+(Done)
 # Registers for storing active object
     - X and Y registers.
     - 4 positions per register (number of pixels per object is 4).
     - 5 bits per position (2 ^ 5 > playground dimensions).
 
 
-# Counter/Looper
+(Done)
+# Basic Counter/Looper
     - 2-bit counter (0 -> 3).
     - Counter will be used to loop through each pixel of the active object to perform further action (draw, erase, wall detection, ...).
+
+
+# Single Step Sequencer
+    - Erase active object.
+        - Store 4 zeros to memory (4 cycles).
+    - Move/rotate active object.
+        - Add +/-1 to all points of active object (4 cycles).
+    - Redraw active object.
+        - Store 4 ones to memory (4 cycles).
+    - Detect collisions.
+        - Compare all points of active object with bottom/walls.
+
+
+# Game Sequencer
 
 
 # Basic clock frequency
