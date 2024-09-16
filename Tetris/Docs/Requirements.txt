@@ -1,4 +1,4 @@
-(Done)
+
 # Object shapes
    O:  ##
        ##
@@ -136,4 +136,12 @@
 # Game restart
     - Erase screen using the "wave up and down" effect.
     - Reset the score counter.
+
+
+# Sound effects
+    - Clean screen
+    - New object / old object was placed
+    - Move object
+    - Shift playground down
+    - End game
 
