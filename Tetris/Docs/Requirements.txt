@@ -1,4 +1,3 @@
-
 # Object shapes
    O:  ##
        ##
@@ -39,7 +38,7 @@
     - Playground memory will be directly mapped to display.
 
 
-(Done)
+(Done) !!!Prerobit/aktualizovat!!!
 # Registers for storing active object
     - X and Y registers.
     - 4 positions per register (number of pixels per object is 4).
@@ -90,6 +89,7 @@
     - Use (pseudo) random number generator.
 
 
+(Done)
 # Object drawing/erasing (storing to/ erasing from playground memory)
     - Drawn object (already copied to playground memory) will be deleted from that memory.
     - Active object will be copied from register to playground memory.
@@ -99,6 +99,7 @@
     - Active object can be shifted by player`s input downwards and to the sides.
 
 
+(Done)
 # Object rotation
     - Active object can be rotated in one direction.
 
