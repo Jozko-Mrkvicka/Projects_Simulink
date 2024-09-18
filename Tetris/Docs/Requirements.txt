@@ -39,7 +39,7 @@
     - Playground memory will be directly mapped to display.
 
 
-(Done) !!!Prerobit/aktualizovat!!!
+(Done) !!!Prerobit/aktualizovat requirement!!!
 # Registers for storing active object
     - X and Y registers.
     - 4 positions per register (number of pixels per object is 4).
@@ -50,6 +50,14 @@
 # Basic Counter/Looper
     - 2-bit counter (0 -> 3).
     - Counter will be used to loop through each pixel of the active object to perform further action (draw, erase, wall detection, ...).
+
+
+# Interrupt based execution.
+    - Move left interrupt.
+    - Move right interrupt.
+    - Move down interrupt.
+    - Turn interrupt.
+    - Timer interrupt.
 
 
 # Single Step Sequencer
