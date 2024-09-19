@@ -113,6 +113,7 @@
     - Active object can be rotated in one direction.
 
 
+(Done)
 # Wall detection
     - Before every redraw, check if active object reached a playground wall.
     - Loop through all pixels of the active object.
