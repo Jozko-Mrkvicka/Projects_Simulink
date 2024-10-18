@@ -2,4 +2,5 @@
 *.exp
 *_acc.lib
 *.mexw64
-*/slprj/*
+slprj/*
+Pokus/*
